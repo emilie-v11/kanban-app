@@ -1,0 +1,322 @@
+[
+  {
+    "id": 0,
+    "affected_user_id": 0,
+    "state": "Done",
+    "title": "Création de la BDD",
+    "description": "Concevoir et mettre en place la structure de la base de données de l'application de gestion, y compris les tables, les relations et les contraintes.",
+    "tags": ["Backend"]
+  },
+  {
+    "id": 1,
+    "affected_user_id": 1,
+    "state": "Done",
+    "title": "Interface utilisateur de connexion",
+    "description": "Concevoir et implémenter l'interface utilisateur de connexion, y compris la page de connexion, la gestion des sessions utilisateur et les fonctionnalités de récupération de mot de passe.",
+    "tags": ["UI"]
+  },
+  {
+    "id": 2,
+    "affected_user_id": null,
+    "state": "Todo",
+    "title": "Intégration de la gestion des utilisateurs",
+    "description": "Intégrer un système de gestion des utilisateurs pour permettre l'inscription, la connexion et la gestion des profils.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 3,
+    "affected_user_id": null,
+    "state": "Todo",
+    "title": "Mise en place de l'authentification à deux facteurs",
+    "description": "Mettre en place une authentification à deux facteurs pour renforcer la sécurité des comptes utilisateur.",
+    "tags": ["Backend", "Security"]
+  },
+  {
+    "id": 4,
+    "affected_user_id": 3,
+    "state": "Doing",
+    "title": "Création de la page d'accueil",
+    "description": "Créer la page d'accueil de l'application avec des informations sur les fonctionnalités principales.",
+    "tags": ["UI"]
+  },
+  {
+    "id": 5,
+    "affected_user_id": null,
+    "state": "Todo",
+    "title": "Mise en place de la gestion de projet",
+    "description": "Développer un module de gestion de projet pour permettre aux utilisateurs de créer, suivre et gérer leurs projets.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 6,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Optimisation des performances de la base de données",
+    "description": "Optimiser les requêtes SQL et les index pour améliorer les performances de la base de données.",
+    "tags": ["Backend", "Performance"]
+  },
+  {
+    "id": 7,
+    "affected_user_id": 4,
+    "state": "Doing",
+    "title": "Ajout de notifications par e-mail",
+    "description": "Mettre en place un système de notifications par e-mail pour informer les utilisateurs des mises à jour importantes.",
+    "tags": ["Backend"]
+  },
+  {
+    "id": 8,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de graphiques de données",
+    "description": "Développer des graphiques interactifs pour visualiser les données clés de l'application.",
+    "tags": ["UI", "Backend"]
+  },
+  {
+    "id": 9,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Ajout de la fonctionnalité de chat en direct",
+    "description": "Intégrer un chat en direct pour permettre aux utilisateurs de communiquer en temps réel.",
+    "tags": ["UI", "Backend"]
+  },
+  {
+    "id": 10,
+    "affected_user_id": 2,
+    "state": "Doing",
+    "title": "Mise en place de la gestion des tâches",
+    "description": "Développer un module de gestion des tâches pour permettre aux utilisateurs de créer et de suivre leurs tâches.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 11,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Amélioration de l'interface utilisateur mobile",
+    "description": "Optimiser l'interface utilisateur pour les appareils mobiles afin d'améliorer l'expérience utilisateur sur les smartphones et les tablettes.",
+    "tags": ["UI"]
+  },
+  {
+    "id": 12,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la messagerie instantanée",
+    "description": "Intégrer une messagerie instantanée pour permettre aux utilisateurs de discuter en temps réel avec leurs collègues.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 13,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de la gestion des documents",
+    "description": "Développer un système de gestion des documents pour permettre aux utilisateurs de télécharger, stocker et partager des fichiers.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 14,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Optimisation de la sécurité de l'application",
+    "description": "Renforcer la sécurité de l'application en effectuant des audits de sécurité et en appliquant les meilleures pratiques.",
+    "tags": ["Security"]
+  },
+  {
+    "id": 15,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de rapports personnalisés",
+    "description": "Développer un générateur de rapports personnalisés pour permettre aux utilisateurs de créer des rapports basés sur leurs données.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 16,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des événements",
+    "description": "Intégrer un système de gestion des événements pour planifier, suivre et gérer les événements.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 17,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de la gestion des contacts",
+    "description": "Développer un module de gestion des contacts pour permettre aux utilisateurs de gérer leurs contacts professionnels.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 18,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la géolocalisation",
+    "description": "Intégrer la géolocalisation pour permettre aux utilisateurs de visualiser des informations basées sur leur emplacement.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 19,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de modèles de documents",
+    "description": "Développer un système de création de modèles de documents pour faciliter la génération de documents personnalisés.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 20,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des stocks",
+    "description": "Intégrer un système de gestion des stocks pour permettre aux utilisateurs de suivre leurs inventaires.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 21,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Amélioration de la recherche de données",
+    "description": "Optimiser la fonction de recherche pour permettre aux utilisateurs de trouver rapidement les informations dont ils ont besoin.",
+    "tags": ["Backend", "UI", "Performance"]
+  },
+  {
+    "id": 22,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des budgets",
+    "description": "Intégrer un système de gestion des budgets pour permettre aux utilisateurs de suivre leurs dépenses et leurs revenus.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 23,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de l'exportation de données",
+    "description": "Développer une fonctionnalité d'exportation de données pour permettre aux utilisateurs de sauvegarder leurs informations.",
+    "tags": ["Backend"]
+  },
+  {
+    "id": 24,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de rapports de performance",
+    "description": "Développer des rapports de performance pour aider les utilisateurs à évaluer l'efficacité de leur utilisation de l'application.",
+    "tags": ["Backend", "UI", "Performance"]
+  },
+  {
+    "id": 25,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des rendez-vous",
+    "description": "Intégrer un système de gestion des rendez-vous pour permettre aux utilisateurs de planifier leurs réunions et leurs rendez-vous.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 26,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de tableaux de bord personnalisables",
+    "description": "Développer des tableaux de bord personnalisables pour permettre aux utilisateurs de suivre leurs indicateurs clés de performance.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 27,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des formations",
+    "description": "Intégrer un système de gestion des formations pour permettre aux utilisateurs de suivre et de gérer leurs formations professionnelles.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 28,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de la gestion des rapports d'incident",
+    "description": "Développer un système de gestion des rapports d'incident pour permettre aux utilisateurs de signaler les problèmes et les incidents.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 29,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des ressources humaines",
+    "description": "Intégrer un système de gestion des ressources humaines pour permettre aux utilisateurs de gérer les informations sur leur personnel.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 30,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de rapports de conformité",
+    "description": "Développer des rapports de conformité pour aider les utilisateurs à se conformer aux réglementations en vigueur.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 31,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des projets de recherche",
+    "description": "Intégrer un système de gestion des projets de recherche pour permettre aux utilisateurs de suivre leurs projets de recherche.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 32,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de la gestion des licences logicielles",
+    "description": "Développer un système de gestion des licences logicielles pour permettre aux utilisateurs de gérer leurs licences logicielles.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 33,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des vacances",
+    "description": "Intégrer un système de gestion des vacances pour permettre aux utilisateurs de demander et de gérer leurs congés.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 34,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Création de rapports de dépenses",
+    "description": "Développer des rapports de dépenses pour permettre aux utilisateurs de suivre leurs dépenses professionnelles.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 35,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des contrats",
+    "description": "Intégrer un système de gestion des contrats pour permettre aux utilisateurs de gérer leurs contrats avec les clients et les fournisseurs.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 36,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Mise en place de la gestion des connaissances",
+    "description": "Développer un système de gestion des connaissances pour permettre aux utilisateurs de partager et d'accéder aux informations importantes.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 37,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Intégration de la gestion des demandes de service",
+    "description": "Intégrer un système de gestion des demandes de service pour permettre aux utilisateurs de soumettre et de suivre les demandes de service.",
+    "tags": ["Backend", "UI"]
+  },
+  {
+    "id": 38,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Planification de la maintenance régulière",
+    "description": "Élaborer un plan de maintenance régulière pour garantir que l'application fonctionne de manière optimale.",
+    "tags": ["Maintenance Schedule"]
+  },
+  {
+    "id": 39,
+    "affected_user_id": null,
+    "state": "Backlog",
+    "title": "Génération des factures mensuelles",
+    "description": "Développer un module pour la génération automatique des factures mensuelles pour les clients de l'application.",
+    "tags": ["Invoice"]
+  }
+]
