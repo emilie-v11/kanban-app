@@ -11,6 +11,7 @@ function KanbanBoard() {
   useEffect(() => {
     axios
       // .get('https://awa.dev.adsoftware-tech.com/api/kanban/items')
+      //local db json
       .get('/db/api-data.json')
       .then((response) => {
         console.log(response.data);
@@ -30,7 +31,7 @@ function KanbanBoard() {
         <KanbanColumn
           key={column.title}
           title={column.title}
-          color={column.color}
+          bgcolor={column.bgcolor}
           tasks={getColumnTasks(column.title)}
         />
       ))}

@@ -9,6 +9,6 @@ export interface Task {
 
 export interface Column {
   title: string;
-  color: string;
+  bgcolor: string;
   tasks: Task[];
 }
