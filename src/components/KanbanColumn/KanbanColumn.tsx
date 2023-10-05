@@ -12,12 +12,13 @@ const ColumnBlock = styled.div`
   overflow-y: scroll;
 `;
 
-const ColumnHeader = styled.div`
+const ColumnHeader = styled.div<{ $bgcolor?: string }>`
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
   z-index: 2;
   border-radius: 10px 10px 0 0;
+  background-color: ${(props) => props.$bgcolor || 'pink'};
 `;
 
 const ColumnTitle = styled.h2`
@@ -29,12 +30,10 @@ const ColumnTitle = styled.h2`
   color: #172b4d;
 `;
 
-// TODO: props bgcolor with styled-components
-
 const KanbanColumn = ({ title, bgcolor, tasks }: Column) => {
   return (
     <ColumnBlock>
-      <ColumnHeader style={{ backgroundColor: bgcolor }}>
+      <ColumnHeader $bgcolor={bgcolor}>
         <ColumnTitle>{title}</ColumnTitle>
       </ColumnHeader>
       <TasksList tasks={tasks} />
