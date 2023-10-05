@@ -74,12 +74,12 @@ const TaskItem = ({ task }: TaskItemProps) => {
         <TaskTitle>{task.title}</TaskTitle>
         <TaskDescription>{task.description}</TaskDescription>
       </TaskContent>
-      {typeof task.affected_user_id === 'number' && (
+      {typeof task.affected_user_id === 'number' ? (
         <TaskAffectedUser>
           Utilisateur affecté :
           <TaskAffectedUserNumber>{task.affected_user_id}</TaskAffectedUserNumber>
         </TaskAffectedUser>
-      )}
+      ): <TaskAffectedUser>Non affecté</TaskAffectedUser>}
     </TaskContainer>
   );
 };
