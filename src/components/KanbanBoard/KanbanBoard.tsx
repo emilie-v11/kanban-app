@@ -1,9 +1,20 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
-import './KanbanBoard.css';
 import KanbanColumn from '../KanbanColumn/KanbanColumn';
 import { Task } from '../../data/interfaces';
 import { columns } from '../../data/columns';
+import styled from 'styled-components';
+
+const Section = styled.section`
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  width: 100%;
+  max-width: 1440px;
+  max-height: 87vh;
+  margin: 0 auto;
+  overflow-y: scroll;
+`;
 
 function KanbanBoard() {
   const [tasks, setTasks] = useState<Task[]>([]);
@@ -26,7 +37,7 @@ function KanbanBoard() {
   const getColumnTasks = (column: string) => tasks.filter((task) => task.state === column);
 
   return (
-    <div className="kanban-board">
+    <Section>
       {Object.values(columns).map((column) => (
         <KanbanColumn
           key={column.title}
@@ -35,7 +46,7 @@ function KanbanBoard() {
           tasks={getColumnTasks(column.title)}
         />
       ))}
-    </div>
+    </Section>
   );
 }
 
