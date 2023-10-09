@@ -2,7 +2,7 @@ import { Column } from '../../data/interfaces';
 import TasksList from '../Tasks/TasksList';
 import styled from 'styled-components';
 
-const ColumnBlock = styled.div`
+const ColumnBlock = styled.section`
   flex: 1;
   background-color: #f5f5f5;
   border-radius: 10px;

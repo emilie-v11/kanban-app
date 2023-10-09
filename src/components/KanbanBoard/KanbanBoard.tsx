@@ -5,7 +5,7 @@ import { Task } from '../../data/interfaces';
 import { columns } from '../../data/columns';
 import styled from 'styled-components';
 
-const Section = styled.section`
+const Section = styled.main`
   display: flex;
   flex-wrap: nowrap;
   gap: 1rem;

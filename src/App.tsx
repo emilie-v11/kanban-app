@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import KanbanBoard from './components/KanbanBoard/KanbanBoard';
+import AppRouter from './AppRouter';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -19,15 +19,13 @@ const Header = styled.header`
   padding: 1rem 0;
 `;
 
-function App() {
+function App(): JSX.Element {
   return (
     <Wrapper>
       <Header>
         <h1>Kanban Board</h1>
       </Header>
-      <main>
-        <KanbanBoard />
-      </main>
+      <AppRouter />
     </Wrapper>
   );
 }
