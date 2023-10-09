@@ -66,6 +66,9 @@ interface TaskItemProps {
 }
 
 const TaskItem = ({ task }: TaskItemProps) => {
+  const AffectedUserStyle =
+    typeof task.affected_user_id === 'number' ? TaskAffectedUserNumber : 'span';
+
   console.log(task.affected_user_id);
   return (
     <TaskContainer key={task.id}>
@@ -74,12 +77,13 @@ const TaskItem = ({ task }: TaskItemProps) => {
         <TaskTitle>{task.title}</TaskTitle>
         <TaskDescription>{task.description}</TaskDescription>
       </TaskContent>
-      {typeof task.affected_user_id === 'number' ? (
+      {task.affected_user_id === null ? (
+        <TaskAffectedUser>Aucun utilisateur affecté</TaskAffectedUser>
+      ) : (
         <TaskAffectedUser>
-          Utilisateur affecté :
-          <TaskAffectedUserNumber>{task.affected_user_id}</TaskAffectedUserNumber>
+          Utilisateur affecté :<AffectedUserStyle>{task.affected_user_id}</AffectedUserStyle>
         </TaskAffectedUser>
-      ): <TaskAffectedUser>Non affecté</TaskAffectedUser>}
+      )}
     </TaskContainer>
   );
 };
