@@ -16,10 +16,22 @@ const Section = styled.section`
   overflow-y: scroll;
 `;
 
+const PendingMessage = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2rem;
+  color: #fff;
+  font-size: 2rem;
+`;
+
 function KanbanBoard() {
   const [tasks, setTasks] = useState<Task[]>([]);
+  const [isPending, setIsPending] = useState<boolean>(false);
+  const [error, setError] = useState(null);
 
   useEffect(() => {
+    setIsPending(true);
     axios
       // .get('https://awa.dev.adsoftware-tech.com/api/kanban/items')
       //local db json
@@ -27,14 +39,23 @@ function KanbanBoard() {
       .then((response) => {
         console.log(response.data);
         const apiData: Task[] = response.data;
+        setIsPending(false);
         setTasks(apiData);
+        setError(null);
       })
       .catch((error) => {
         console.log(error);
+        setError(error.message);
+        setIsPending(false);
       });
   }, []);
 
   const getColumnTasks = (column: string) => tasks.filter((task) => task.state === column);
+
+  if (isPending) return <PendingMessage>Loading...</PendingMessage>;
+
+  console.log(tasks);
+  console.log(error);
 
   return (
     <Section>
