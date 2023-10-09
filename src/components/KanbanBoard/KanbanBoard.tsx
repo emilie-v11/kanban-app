@@ -50,7 +50,7 @@ function KanbanBoard() {
       });
   }, []);
 
-  const getColumnTasks = (column: string) => tasks.filter((task) => task.state === column);
+  const getColumnTasksByState = (column: string) => tasks.filter((task) => task.state === column);
 
   if (isPending) return <PendingMessage>Loading...</PendingMessage>;
 
@@ -64,7 +64,7 @@ function KanbanBoard() {
           key={column.title}
           title={column.title}
           bgcolor={column.bgcolor}
-          tasks={getColumnTasks(column.title)}
+          tasks={getColumnTasksByState(column.title)}
         />
       ))}
     </Section>
