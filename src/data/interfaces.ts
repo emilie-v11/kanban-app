@@ -1,5 +1,5 @@
 export interface Task {
-  affected_user_id: number;
+  affected_user_id: number | null;
   description: string;
   id: number;
   state: string;

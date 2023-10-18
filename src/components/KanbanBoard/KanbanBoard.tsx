@@ -1,9 +1,11 @@
-import { useState, useEffect } from 'react';
-import axios from 'axios';
+import { useEffect } from 'react';
+// import axios from 'axios';
 import KanbanColumn from '../KanbanColumn/KanbanColumn';
-import { Task } from '../../data/interfaces';
+// import { Task } from '../../data/interfaces';
 import { columns } from '../../data/columns';
 import styled from 'styled-components';
+import { useAppDispatch, useAppSelector } from '../../redux/hooks';
+import { fetchTasks } from '../../redux/slices/taskSlice';
 
 const Section = styled.main`
   display: flex;
@@ -26,36 +28,40 @@ const PendingMessage = styled.div`
 `;
 
 function KanbanBoard() {
-  const [tasks, setTasks] = useState<Task[]>([]);
-  const [isPending, setIsPending] = useState<boolean>(false);
-  const [error, setError] = useState(null);
+  const dispatch = useAppDispatch();
+  const { tasks, isPending, error } = useAppSelector((state) => state.tasks);
+  // const [tasks, setTasks] = useState<Task[]>([]);
+  // const [isPending, setIsPending] = useState<boolean>(false);
+  // const [error, setError] = useState(null);
 
   useEffect(() => {
-    setIsPending(true);
-    axios
-      // .get('https://awa.dev.adsoftware-tech.com/api/kanban/items')
-      //local db json
-      .get('/db/api-data.json')
-      .then((response) => {
-        console.log(response.data);
-        const apiData: Task[] = response.data;
-        setIsPending(false);
-        setTasks(apiData);
-        setError(null);
-      })
-      .catch((error) => {
-        console.log(error);
-        setError(error.message);
-        setIsPending(false);
-      });
-  }, []);
+    dispatch(fetchTasks());
+  }, [dispatch]);
+
+  // useEffect(() => {
+  //   setIsPending(true);
+  //   axios
+  //     .get('https://awa.dev.adsoftware-tech.com/api/kanban/items')
+  //     //local db json
+  //     // .get('/db/api-data.json')
+  //     .then((response) => {
+  //       console.log(response.data);
+  //       const apiData: Task[] = response.data;
+  //       setIsPending(false);
+  //       setTasks(apiData);
+  //       setError(null);
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       setError(error.message);
+  //       setIsPending(false);
+  //     });
+  // }, []);
 
   const getColumnTasksByState = (column: string) => tasks.filter((task) => task.state === column);
 
   if (isPending) return <PendingMessage>Loading...</PendingMessage>;
-
-  console.log(tasks);
-  console.log(error);
+  if (error) return <PendingMessage>{error}</PendingMessage>;
 
   return (
     <Section>
