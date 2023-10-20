@@ -1,13 +1,7 @@
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { RootState } from '../store';
-import { Task } from '../../data/interfaces';
-import axios from 'axios';
-
-interface TaskState {
-  tasks: Task[];
-  isPending: boolean;
-  error: string | null | undefined;
-}
+import { TaskState } from '../../data/interfaces';
+import { fetchTasks } from '../../services/apiCall';
 
 const initialState: TaskState = {
   tasks: [],
@@ -15,15 +9,11 @@ const initialState: TaskState = {
   error: null,
 };
 
-export const fetchTasks = createAsyncThunk('kanban/fetchTasks', async () => {
-  const response = await axios.get('https://awa.dev.adsoftware-tech.com/api/kanban/items');
-  return response.data as Task[];
-});
-
 export const taskSlice = createSlice({
   name: 'task',
   initialState,
   reducers: {
+    // for future use if we want to add tasks manually
     // addTask: (state, action: PayloadAction<Task>) => {
     //   state.tasks.push(action.payload);
     // },

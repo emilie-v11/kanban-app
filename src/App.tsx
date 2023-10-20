@@ -1,5 +1,8 @@
+import { useEffect } from 'react';
 import styled from 'styled-components';
 import AppRouter from './AppRouter';
+import { useAppDispatch } from './redux/hooks';
+import { fetchTasks } from './services/apiCall';
 
 const Wrapper = styled.div`
   width: 100%;
@@ -20,6 +23,12 @@ const Header = styled.header`
 `;
 
 function App(): JSX.Element {
+  const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(fetchTasks());
+  }, [dispatch]);
+
   return (
     <Wrapper>
       <Header>

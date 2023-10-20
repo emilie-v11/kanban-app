@@ -1,3 +1,9 @@
+export interface TaskState {
+  tasks: Task[];
+  isPending: boolean;
+  error: string | null | undefined;
+}
+
 export interface Task {
   affected_user_id: number | null;
   description: string;

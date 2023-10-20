@@ -69,7 +69,6 @@ const TaskItem = ({ task }: TaskItemProps) => {
   const AffectedUserStyle =
     typeof task.affected_user_id === 'number' ? TaskAffectedUserNumber : 'span';
 
-  console.log(task.affected_user_id);
   return (
     <TaskContainer key={task.id}>
       <TagsList tags={task.tags} />
